@@ -1,0 +1,6 @@
+@import "tailwind.css";
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  @apply bg-[#D9EAD3] dark:bg-[#2e312f] text-black dark:text-white;
+}
