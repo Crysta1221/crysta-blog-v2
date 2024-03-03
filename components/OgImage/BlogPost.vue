@@ -27,6 +27,6 @@ withDefaults(
 
 <style scoped>
 .crysta_bg {
-  background-image: url("../../assets/og_blog.png");
+  background-image: url("https://dl.hstorage.io/20240302234443_31343852.png");
 }
 </style>
