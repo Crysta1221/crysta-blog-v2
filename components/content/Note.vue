@@ -1,11 +1,36 @@
 <script setup>
-defineProps(['type'])
+defineProps(["type", "text"]);
 </script>
 
 <template>
-  <div :class="[type]">
-    <p class="font-bold uppercase">{{ type }}</p>
-    <ContentSlot :use="$slots.default" unwrap="p" />
+  <div :class="[type]" class="mb-4 mt-2">
+    <div class="flex">
+      <div class="flex-shrink-0">
+        <Icon
+          class="flex-shrink-0 size-5"
+          :name="
+            type === 'warn'
+              ? 'tabler:alert-triangle-filled'
+              : type === 'info'
+              ? 'tabler:alert-circle-filled'
+              : type === 'alert'
+              ? 'ph:fire-fill'
+              : ''
+          "
+        />
+      </div>
+      <div class="ms-4">
+        <h3 class="text-sm font-semibold uppercase">
+          {{}}
+          {{ text || type }}
+        </h3>
+        <ContentSlot
+          class="mt-1 text-sm text-yellow-700"
+          :use="$slots.default"
+          unwrap="p"
+        />
+      </div>
+    </div>
   </div>
 </template>
 

@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     defaultLocale: "ja",
   },
   ogImage: {
-    fonts: ["Noto+Sans+JP:400"],
+    fonts: ["Noto+Sans+JP:600"],
   },
   content: {
     highlight: {

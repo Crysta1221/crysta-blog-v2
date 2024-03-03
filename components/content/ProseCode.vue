@@ -6,10 +6,10 @@
       >
         <div class="flex items-center">
           <template v-if="languageIcon">
-            <Icon :icon="languageIcon" class="ml-3 mr-3 text-base" />
+            <Icon :name="languageIcon" class="ml-3 mr-3 text-base" />
           </template>
           <template v-else>
-            <Icon icon="bi:file-earmark-text" class="ml-3 mr-3 text-base" />
+            <Icon name="bi:file-earmark-text" class="ml-3 mr-3 text-base" />
           </template>
           <div class="font-mono mt-0.5 text-white">
             {{ filename }}
@@ -25,18 +25,16 @@
             class="bg-transparent text-white text-sm font-light px-1 w-8 h-8 rounded transition-all duration-200 ease-in-out flex justify-center items-center hover:bg-gray-500 dark:hover:bg-gray-700"
           >
             <template v-if="!copied">
-              <Icon icon="tabler:copy" width="16" height="16" />
+              <Icon name="tabler:copy" width="16" height="16" />
             </template>
             <template v-else>
-              <Icon icon="tabler:check" width="16" height="16" />
+              <Icon name="tabler:check" width="16" height="16" />
             </template>
           </button>
         </div>
       </div>
 
-      <div
-        class="flex border mb-6 -mt-6 border-gray-300 dark:border-gray-600"
-      />
+      <div class="flex border mb-6 -mt-6 border-gray-600" />
       <div class="mx-2 mb-2 -mt-6 code">
         <slot />
       </div>
@@ -45,7 +43,6 @@
 </template>
 
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
 import { useClipboard } from "@vueuse/core";
 
 const { copy, copied, text } = useClipboard();
@@ -90,6 +87,9 @@ const languageMap: Record<string, { icon: string }> = {
   },
   py: {
     icon: "logos:python",
+  },
+  ts: {
+    icon: "logos:typescript-icon",
   },
 };
 

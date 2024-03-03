@@ -33,10 +33,10 @@
           </NuxtLink>
         </div>
       </div>
-      <div class="mt-4">
+      <div class="mt-4 mb-6">
         <img class="rounded-lg" :src="news.image" />
       </div>
-      <div class="mt-4">
+      <div class="mt-4 mb-8">
         <ContentRenderer :value="news" />
       </div>
     </ContentDoc>
