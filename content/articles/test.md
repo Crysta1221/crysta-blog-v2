@@ -23,6 +23,10 @@ Hello
 
 例えば、`const codeInline: string = 'highlighted code inline'`{lang="ts"}を行うと、次のようなエラーが表示されることがあります。
 
-```ts
-const codeInline: string = 'highlighted code inline'
+```md [index.md]
+# a
+## aa
 ```
+
+::BlogCard{url="https://blog.crystaworld1221.com/articles/test"}
+::
