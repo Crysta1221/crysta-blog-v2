@@ -1,6 +1,6 @@
 <template>
   <div class="mt-2 mb-2">
-    <div class="p-4 rounded-lg bg-[#323631] dark:bg-[#161B22] border-gray-700">
+    <div class="p-4 rounded-lg bg-[#323631] dark:bg-zinc-800 border-gray-700">
       <div
         class="mb-8 text-gray-300 flex items-center justify-between text-sm -mt-1.5"
       >
@@ -22,7 +22,7 @@
               copied = true;
             "
             aria-label="Copy"
-            class="bg-transparent text-white text-sm font-light px-1 w-8 h-8 rounded transition-all duration-200 ease-in-out flex justify-center items-center hover:bg-gray-500 dark:hover:bg-gray-700"
+            class="bg-transparent text-white text-sm font-light px-1 w-8 h-8 rounded transition-all duration-200 ease-in-out flex justify-center items-center hover:bg-gray-500 dark:hover:bg-zinc-600"
           >
             <template v-if="!copied">
               <Icon name="tabler:copy" width="16" height="16" />
