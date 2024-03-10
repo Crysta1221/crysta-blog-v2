@@ -1,6 +1,8 @@
 <template>
   <div class="mt-2 mb-2">
-    <div class="p-4 rounded-lg bg-[#323631] dark:bg-zinc-800 border-gray-700">
+    <div
+      class="p-4 rounded-lg bg-[#323631] dark:bg-neutral-900 border-gray-700"
+    >
       <div
         class="mb-8 text-gray-300 flex items-center justify-between text-sm -mt-1.5"
       >
