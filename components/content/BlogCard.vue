@@ -2,18 +2,12 @@
 const props = defineProps({
   url: String,
 });
-const { data, pending } = await useLazyAsyncData(
-  props.url,
-  () => {
-    const query = { url: props.url };
-    return $fetch(`/api/ogp`, {
-      query,
-    });
-  },
-  {
-    server: false,
-  }
-);
+const { data, pending } = await useLazyAsyncData(props.url, () => {
+  const query = { url: props.url };
+  return $fetch(`/api/ogp`, {
+    query,
+  });
+});
 </script>
 
 <template>
