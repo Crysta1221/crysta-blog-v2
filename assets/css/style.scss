@@ -5,3 +5,9 @@ body {
   font-weight: 300;
   @apply bg-[#D9EAD3] dark:bg-[#2e312f] text-black dark:text-white;
 }
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    Liberation Mono, Courier New, monospace, "Noto Sans JP", sans-serif;
+}

@@ -93,6 +93,9 @@ const languageMap: Record<string, { icon: string }> = {
   ts: {
     icon: "logos:typescript-icon",
   },
+  sh: {
+    icon: "skill-icons:bash-dark",
+  },
 };
 
 const filenameMap: Record<string, { icon: string }> = {

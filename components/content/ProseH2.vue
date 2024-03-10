@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown text-2xl mt-4 mb-2" ref="link">
+  <div class="markdown text-2xl mt-6 mb-4 underline" ref="link">
     <a class="icon" @click="copy">
       <slot />
     </a>

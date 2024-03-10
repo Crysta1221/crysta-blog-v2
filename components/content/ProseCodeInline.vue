@@ -14,7 +14,7 @@
   font-size: 14px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
-  @apply bg-[#595a58] dark:bg-[#5e5b57] text-black dark:text-white;
+  @apply bg-[#595a58] dark:bg-[#5e5b57] text-white dark:text-white;
 }
 
 h1 a .prose-code-inline,

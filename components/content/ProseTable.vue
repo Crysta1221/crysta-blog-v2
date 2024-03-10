@@ -4,7 +4,7 @@
       <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
         <div class="overflow-hidden">
           <table
-            class="min-w-full text-left text-sm font-light text-surface dark:text-white"
+            class="min-w-full text-left text-sm font-light text-surface dark:text-white mb-4"
           >
             <slot />
           </table>
