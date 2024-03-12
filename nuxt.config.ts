@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/image",
     "dayjs-nuxt",
+    "@vueuse/nuxt",
   ],
   css: ["~/assets/css/style.scss"],
   plugins: ["~/plugins/preline.client.ts"],
