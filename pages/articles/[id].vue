@@ -40,7 +40,6 @@
           class="rounded-lg w-full"
           :src="news.image"
           :alt="news.title"
-          loading="lazy"
         />
       </div>
       <div class="mt-4 mb-8">
