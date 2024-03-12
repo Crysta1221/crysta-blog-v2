@@ -40,6 +40,7 @@
           class="rounded-lg w-full"
           :src="news.image"
           :alt="news.title"
+          sizes="sm:400px md:1200px"
         />
       </div>
       <div class="mt-4 mb-8">

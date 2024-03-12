@@ -14,6 +14,7 @@
               src="/crysta.png"
               class="size-8 rounded-full"
               alt="CrystaWorld"
+              format="webp"
             />
             <p class="font-bold text-base whitespace-nowrap text-white">
               Crysta Blogs
