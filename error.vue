@@ -1,9 +1,8 @@
 <template>
   <Navigation />
-
   <div class="mt-4 ml-10 mr-8">
     <div class="flex flex-col justify-center items-center mt-4">
-      <NuxtImg class="w-[480px]" src="/construction.svg" />
+      <img class="w-[480px]" src="/construction.svg" />
       <h1 class="mt-4 text-2xl text-center lg:text-start">404 Not Found</h1>
       <p>お探しのページは移動したか削除された場合があります。</p>
       <router-link
