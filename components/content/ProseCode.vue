@@ -172,9 +172,8 @@ export default defineComponent({
 :slotted(pre code .highlight) {
   background-color: #363b46;
   display: block;
-  margin-right: -1em;
+  margin-right: -2em;
   margin-left: -1em;
-  padding-right: 1em;
   padding-left: 0.8em;
   border-left: 0.15em solid green;
 }

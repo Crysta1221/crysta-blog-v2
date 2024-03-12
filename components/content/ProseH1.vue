@@ -1,6 +1,6 @@
 <template>
   <div class="markdown text-3xl mt-4 mb-2 w-full" ref="link">
-    <a class="icon" @click="copy">
+    <a class="icon" @click="copy" href="">
       <slot />
     </a>
     <div class="mt-2 border" />

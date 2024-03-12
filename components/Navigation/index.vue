@@ -10,7 +10,11 @@
       <div class="flex items-center justify-between">
         <div class="md:flex">
           <NuxtLink to="/" class="mr-2 lg:-ml-3 flex items-center space-x-3">
-            <NuxtImg src="/crysta.png" class="size-8 rounded-full" />
+            <NuxtImg
+              src="/crysta.png"
+              class="size-8 rounded-full"
+              alt="CrystaWorld"
+            />
             <p class="font-bold text-base whitespace-nowrap text-white">
               Crysta Blogs
             </p>
@@ -20,12 +24,14 @@
           <button
             type="button"
             class="sm:w-full md:bg-zinc-900 px-2 inline-flex items-center gap-x-2 text-sm rounded-md border border-transparent text-[#D9EAD3] hover:bg-[#39453a] hover:text-white disabled:opacity-50 disabled:pointer-events-none dark:text-white h-8"
+            aria-label="Search"
           >
             <Icon name="tabler:search" class="size-4" />
           </button>
           <button
             type="button"
             class="sm:w-full md:bg-zinc-900 px-2 inline-flex items-center gap-x-2 text-sm rounded-md border border-transparent text-[#D9EAD3] hover:bg-[#39453a] hover:text-white disabled:opacity-50 disabled:pointer-events-none dark:text-white h-8"
+            aria-label="Toggle Theme"
             @click="
               toggleDarkMode(
                 $colorMode.preference === 'dark' ? 'light' : 'dark'
@@ -123,6 +129,7 @@
             <button
               type="button"
               class="ml-4 bg-[#222521] hidden md:inline-flex md:bg-zinc-900 px-4 items-center text-sm rounded-md border border-transparent text-[#D9EAD3] hover:bg-[#39453a] hover:text-white disabled:opacity-50 disabled:pointer-events-none dark:text-white h-10"
+              aria-label="Search"
             >
               <Icon name="tabler:search" class="size-4" />
             </button>
@@ -134,6 +141,7 @@
                   $colorMode.preference === 'dark' ? 'light' : 'dark'
                 )
               "
+              aria-label="Toggle Theme"
             >
               <Icon
                 v-if="$colorMode.preference === 'dark'"

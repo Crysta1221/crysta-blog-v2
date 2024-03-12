@@ -2,12 +2,18 @@
 const props = defineProps({
   url: String,
 });
-const { data, pending } = await useLazyAsyncData(props.url, () => {
-  const query = { url: props.url };
-  return $fetch(`/api/ogp`, {
-    query,
-  });
-});
+const { data, pending } = await useLazyAsyncData(
+  props.url,
+  () => {
+    const query = { url: props.url };
+    return $fetch(`/api/ogp`, {
+      query,
+    });
+  },
+  {
+    server: true,
+  }
+);
 </script>
 
 <template>
@@ -29,7 +35,13 @@ const { data, pending } = await useLazyAsyncData(props.url, () => {
         {{ data?.description }}
       </div>
       <div class="flex flex-row items-center gap-2">
-        <img :src="data?.favicon" class="size-4 rounded-sm dark:bg-white" />
+        <NuxtImg
+          format="webp"
+          :src="data?.favicon"
+          class="size-4 rounded-sm dark:bg-white"
+          :alt="data?.title"
+          loading="lazy"
+        />
         <p class="text-xs line-clamp-1 text-gray-800 dark:text-gray-200">
           {{ data?.open_graph?.url }}
         </p>
@@ -39,9 +51,12 @@ const { data, pending } = await useLazyAsyncData(props.url, () => {
       v-if="data?.open_graph?.images"
       class="w-1/3 md:w-auto h-[100px] max-w-[230px] hidden md:inline-flex"
     >
-      <img
+      <NuxtImg
+        format="webp"
         :src="data?.open_graph?.images?.[0].url"
+        :alt="data?.title"
         class="mt-0 mb-0 h-full w-full object-cover rounded-tr-md rounded-br-md"
+        loading="lazy"
       />
     </div>
   </NuxtLink>
@@ -62,7 +77,13 @@ const { data, pending } = await useLazyAsyncData(props.url, () => {
         の応答がありませんでした。このURLが正しいかどうか確認してください。
       </div>
       <div v-if="data?.favicon" class="flex flex-row items-center gap-2">
-        <img :src="data?.favicon" class="size-4 rounded-lg" />
+        <NuxtImg
+          format="webp"
+          :src="data?.favicon"
+          class="size-4 rounded-lg"
+          :alt="data?.title"
+          loading="lazy"
+        />
         <p class="text-xs text-gray-800 dark:text-gray-200">
           {{ props.url }}
         </p>
@@ -77,9 +98,12 @@ const { data, pending } = await useLazyAsyncData(props.url, () => {
       v-if="data?.open_graph?.images"
       class="w-1/3 md:w-auto h-[100px] max-w-[230px] hidden md:inline-flex"
     >
-      <img
+      <NuxtImg
+        format="webp"
         :src="data?.open_graph?.images?.[0].url"
+        :alt="data?.open_graph?.title"
         class="mt-0 mb-0 h-full w-full object-cover rounded-tr-md rounded-br-md"
+        loading="lazy"
       />
     </div>
   </NuxtLink>
