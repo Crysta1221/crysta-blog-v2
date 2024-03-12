@@ -4,10 +4,13 @@
       <NuxtLink
         type="button"
         :to="
-          '//twitter.com/intent/tweet?url=' + share.link + '&text=' + share.text
+          'https://twitter.com/intent/tweet?url=' +
+          share.link +
+          '&text=' +
+          share.text
         "
         target="_blank"
-        class="hs-tooltip-toggle mb-2 inline-block rounded bg-black px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg hover:bg-black/70"
+        class="hs-tooltip-toggle mb-2 inline-block rounded bg-black px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg hover:bg-black/70 dark:hover:bg-black/40"
       >
         <Icon name="simple-icons:x" class="size-4" />
         <span
@@ -21,7 +24,7 @@
     <div class="hs-tooltip">
       <NuxtLink
         type="button"
-        :to="'//social-plugins.line.me/lineit/share?url=' + share.link"
+        :to="'https://social-plugins.line.me/lineit/share?url=' + share.link"
         target="_blank"
         class="hs-tooltip-toggle mb-2 inline-block rounded bg-[#06C755] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg hover:bg-[#06C755]/70"
       >
@@ -38,7 +41,7 @@
       <NuxtLink
         type="button"
         :to="
-          '//misskey-hub.net/ja/share/?url=' +
+          'https://misskey-hub.net/ja/share/?url=' +
           share.link +
           '&text=' +
           share.text
