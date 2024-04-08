@@ -2,7 +2,7 @@
   <NuxtLink
     :href="href"
     :target="target"
-    class="font-medium text-blue-600 underline dark:text-blue-400 hover:no-underline"
+    class="inline-flex items-center gap-0.5 font-medium text-blue-600 underline dark:text-blue-400 hover:no-underline"
   >
     <slot />
   </NuxtLink>

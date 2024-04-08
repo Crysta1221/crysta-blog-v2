@@ -1,7 +1,9 @@
 <template>
-  <code class="prose-code-inline">
-    <slot />
-  </code>
+  <div class="mx-1 text-nowrap inline-block">
+    <code class="prose-code-inline">
+      <slot />
+    </code>
+  </div>
 </template>
 
 <style type="scss" scoped>
@@ -14,11 +16,11 @@
   font-size: 14px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
-  @apply bg-[#595a58] dark:bg-[#5e5b57] text-white dark:text-white;
+  @apply bg-[#F6F5F4] dark:bg-[#5e5b57] text-black dark:text-white text-nowrap;
 }
 
-h1 a .prose-code-inline,
-h2 a .prose-code-inline,
+h1 .prose-code-inline,
+h2 .prose-code-inline,
 h3 a .prose-code-inline,
 h4 a .prose-code-inline,
 h5 a .prose-code-inline,

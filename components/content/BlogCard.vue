@@ -21,12 +21,12 @@ const { data, pending } = await useLazyAsyncData(
     v-if="data?.title"
     :to="props.url"
     target="_blank"
-    class="bg-white dark:bg-zinc-800 mt-4 mb-4 box-border flex min-h-[100px] flex-row justify-between rounded-md border border-gray-300 dark:border-gray-700 text-black dark:text-white"
+    class="bg-white dark:bg-zinc-800 mt-4 mb-4 box-border flex min-h-[100px] flex-row justify-between rounded-md border border-gray-300 dark:border-gray-700 text-black dark:text-white hover:bg-zinc-50 dark:hover:bg-zinc-700/[.10]"
   >
     <div
       class="flex w-1/2 md:w-[65%] flex-grow shrink-0 flex-col justify-evenly break-words px-5"
     >
-      <div class="line-clamp-2 text-sm">
+      <div class="line-clamp-1 md:line-clamp-2 text-sm">
         {{ data?.title }}
       </div>
       <div
@@ -43,7 +43,7 @@ const { data, pending } = await useLazyAsyncData(
           loading="lazy"
         />
         <p class="text-xs line-clamp-1 text-gray-800 dark:text-gray-200">
-          {{ data?.open_graph?.url }}
+          {{ props.url }}
         </p>
       </div>
     </div>

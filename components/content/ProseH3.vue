@@ -1,8 +1,13 @@
 <template>
-  <div class="markdown text-xl mt-4 mb-2">
-    <h3 class="icon" @click="addHashToUrlAndScroll">
-      <slot />
-    </h3>
+  <div
+    class="markdown text-xl mt-4 mb-2 w-full border-l-[5px] border-l-[#98c379] block"
+    ref="link"
+  >
+    <div class="ml-3">
+      <h3 class="icon" @click="addHashToUrlAndScroll">
+        <slot />
+      </h3>
+    </div>
   </div>
 </template>
 

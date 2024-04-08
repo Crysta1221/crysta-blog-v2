@@ -54,7 +54,15 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: "one-dark-pro",
+      theme: {
+        default: "slack-ochin",
+        dark: "slack-dark",
+      },
+    },
+    markdown: {
+      toc: {
+        depth: 3,
+      },
     },
   },
   dayjs: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="markdown text-2xl mt-6 mb-4 underline" ref="link">
+  <div class="markdown text-2xl mt-6 mb-4" ref="link">
     <a class="icon" @click="copy" href="">
       <slot />
     </a>
@@ -10,7 +10,7 @@
 const copy = (event) => {
   event.preventDefault();
   let anchorText = event.target.textContent;
-  anchorText = anchorText.replace(/\s|%20/g, "-"); // Replace spaces or %20 with hyphens
+  anchorText = anchorText.replace(/\s|%20/g, "-").replace("・", "");
   if (/[A-Z]/.test(anchorText)) {
     anchorText = anchorText.toLowerCase();
   }
@@ -30,20 +30,14 @@ function scrollToElementWithOffset(id, offset) {
 }
 
 onMounted(() => {
-  if (window.location.hash) {
-    const id = window.location.hash.replace("#", "");
-    scrollToElementWithOffset(id, -100);
-  }
+  const id = window.location.hash.replace("#", "");
+  scrollToElementWithOffset(id, -100);
 });
 </script>
 
 <style scoped lang="css">
-.markdown {
-  line-height: 1.25;
-  border-bottom: 1px solid var(--color-border-muted);
-}
 .markdown a.icon {
-  @apply relative cursor-pointer;
+  @apply relative cursor-pointer border-b-[#98c379] border-b-[3px] block;
 }
 
 .markdown a.icon::before {

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-x-4 gap-y-2 flex-wrap justify-center mb-8 -ml-1 md:ml-0">
+  <div class="flex gap-x-4 gap-y-2 flex-wrap justify-center mb-4 -ml-1 md:ml-0">
     <div class="hs-tooltip">
       <NuxtLink
         type="button"
